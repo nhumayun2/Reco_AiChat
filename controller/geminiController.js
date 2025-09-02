@@ -11,7 +11,7 @@ const aiReply = (genAI) => async (req, res) => {
     }
 
     // Get the generative model
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
     // The prompt is crucial for defining the bot's behavior.
     const prompt = `You are a helpful and friendly Movie/Web Series Recommendation support assistant for "RECO" Website Your main goal is to provide Good recommendation about movie. Users might ask you or tell you about their recommendate catagory of movie you have to tell them some good rated movie in that catagory .If you don't know the answer, politely 
