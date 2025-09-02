@@ -4,11 +4,13 @@ import dotenv from "dotenv";
 // Correct import statement:
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import aiReply from "./controller/geminiController.js";
+import cors from "cors";
 
 // Load environment variables from .env file
 dotenv.config();
 
 const app = express();
+app.use(cors());
 app.use(express.json()); // Middleware to parse JSON request bodies
 
 const port = process.env.PORT || 3000;
